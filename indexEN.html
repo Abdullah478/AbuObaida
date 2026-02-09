@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>Abu Obaida Al-Jarrah Preparatory School</title>
-    <meta name="description" content="This website is about Abu Obaida Al-Jarrah Preparatory School in Iraq.">
-    <meta name="keywords" content="Abu Obaida Al-Jarrah, Preparatory School, Iraq, education, school">
+    <meta name="description" content="Abu Obaida Al-Jarrah Preparatory School website">
+    <meta name="keywords" content="Abu Obaida Al-Jarrah, school, education, Iraq">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f8f8f8;
             color: #333;
         }
 
         nav {
-            background-color: #333;
+            background-color: #1e1e1e;
             position: sticky;
             top: 0;
             padding: 20px 0;
@@ -47,16 +47,19 @@
             padding: 120px 20px;
             color: white;
             text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
         }
 
         .hero h1 {
             font-size: 60px;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
         }
 
         .hero p {
             font-size: 24px;
             margin-bottom: 30px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
         }
 
         .hero button {
@@ -74,7 +77,6 @@
             background-color: #e67e00;
         }
 
-        
         .content-section {
             display: flex;
             justify-content: space-between;
@@ -86,9 +88,10 @@
         }
 
         .content-section img {
-            max-width: 45%;
-            height: auto;
+            max-width: 47%;
+            height: 470px;
             border-radius: 10px;
+            margin: 0 10px;
             transition: transform 0.3s ease;
         }
 
@@ -112,13 +115,13 @@
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
-            text-align: center;
+            text-align: right;
         }
-
 
         table {
             width: 100%;
             margin-top: 20px;
+            margin: 0 auto;
             border-collapse: collapse;
             background-color: #fff;
             border-radius: 8px;
@@ -127,7 +130,7 @@
 
         table th, table td {
             padding: 15px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
 
@@ -142,45 +145,82 @@
             text-align: center;
             padding: 20px;
         }
+
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .content-section {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .content-section img {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .content-section h2 {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .content-section p {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            table th, table td {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    
+   
     <header class="hero">
         <h1>Abu Obaida Al-Jarrah Preparatory School</h1>
         <p>The school that produced many scientists and innovators.</p>
-       
+        <button onclick="window.location.href='about.html'">Discover More</button>
     </header>
 
-        
-        <nav>
-            <a href="index.html">عربي</a>
-            <a href="indexEN.html">Introduction</a>
-            <a href="EDEN.html">Notable Graduates 2024</a>
-            <a href="MANGEN.html">Former Managers</a>
-            <a href="tcEN.html">Teachers</a>
-            <a href="COEN.html">Conclusion</a>
     
-        </nav>
-    
+    <nav>
+        <a href="index.html">عربي</a>
+        <a href="indexEN.html">Introduction</a>
+        <a href="EDEN.html">Notable Graduates 2024</a>
+        <a href="MANGEN.html">Former Managers</a>
+        <a href="tcEN.html">Teachers</a>
+        <a href="COEN.html">Conclusion</a>
+
+    </nav>
 
     
-    <div  class="content-section">
+    <div class="content-section">
         <div>
-            <h2 style="padding-right: 200px;">Introduction</h2>
-            <h2 style="color: rgb(1, 1, 10);background-color: rgba(255, 255, 255, 0.621);;padding: 10px;margin: 0;width: 600px;">
-                <p>Abu Obaida Al-Jarrah Preparatory School for Boys was established in 1989 and named after the great Islamic leader. It opened as a morning scientific school and graduated many students who excelled academically and morally. Its graduates contributed to serving society in various fields. The school was named after one of the great military leaders in the early days of Islam, the noble companion:</p>
-                <center>Abu Obaida Amir bin Abdullah bin Al-Jarrah</center>
-                <p>One of the ten promised Paradise and one of the first to convert to Islam. The Prophet Muhammad (peace and blessings of Allah be upon him and his family) called him “the trustee of this nation.” He was a prominent military commander in the Levant and its protector. He was one of the first to convert to Islam at the hands of Abu Bakr Al-Siddiq (may Allah be pleased with him). Abu Ubaidah witnessed all the battles with the Prophet (peace and blessings of Allah be upon him and his family), and one of his most famous positions is the story of removing arrows from the Prophet’s face on the Day of Uhud.</p>
-                <p>He commanded the Islamic armies in the Levant, achieving great victories, and had a major influence in the Battle of Yarmouk, which he led against the Romans in the year 15 AH (636 AD). Abu Ubaidah al-Jarrah died of the plague in the year 18 AH (639 AD) at the age of 58 in the Jordan Valley, and was buried there.</p>
-            </h2>
+            <h2>Introduction</h2>
+            <p>Abu Obaida Al-Jarrah Preparatory School for Boys was established in 1989 and named after the great Islamic leader. It opened as a morning scientific school and graduated many students who excelled academically and morally. Its graduates contributed to serving society in various fields. The school was named after one of the great military leaders in the early days of Islam, the noble companion:</p>
+            <h2>Abu Obaida Amir bin Abdullah Al-Jarrah</h2>
+            <p>One of the ten promised Paradise and one of the first to convert to Islam. The Prophet Muhammad (peace and blessings of Allah be upon him and his family) called him "the trustee of this nation." He was a prominent military leader who commanded Islamic armies in the Levant and achieved great victories.</p>
         </div>
+
         <img src="back.jpg" alt="School Image">
     </div>
 
     <footer>
-        <p>© 2026 Abdullah WK مصمم الموقع  </p>
+        <p>© 2024 Abu Obaida Al-Jarrah Preparatory School. All rights reserved.</p>
     </footer>
 
 </body>
