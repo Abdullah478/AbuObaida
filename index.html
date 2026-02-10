@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اعدادية ابو عبيدة الجراح</title>
-    <meta name="description" content="الموقع يتكلم عن مدرسة اعدادية في العراق-صلاح الدين - بيجي وهي (اعدادية ابو عبيدة الجراح)">
-    <meta name="keywords" content="اعدادية, مدرسة, ابو عبيدة الجراح, بيجي, صلاح الدين, تعليم, العراق">
     <style>
-        
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2E2E2E;
+            color: white;
+            overflow-x: hidden;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        /* Navigation */
         nav {
-            background-color: #1e1e1e;
-            position: sticky;
+            position: fixed;
             top: 0;
-            padding: 20px 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
         }
 
         nav a {
@@ -29,183 +38,191 @@
             text-decoration: none;
             font-size: 18px;
             margin: 0 20px;
-            padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 10px 15px;
+            background-color: #FF5733;
+            border-radius: 5px;
+            transition: 0.3s all ease;
         }
 
         nav a:hover {
-            background-color: #ff8c00;
-            color: black;
+            background-color: #D64F2A;
+            transform: scale(1.05);
         }
 
+        /* Hero Section */
         .hero {
-            background-image: url('back.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 120px 20px;
-            color: white;
+            background: url('back.jpg') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            color: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
 
         .hero h1 {
-            font-size: 60px;
+            font-size: 70px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
         }
 
         .hero p {
             font-size: 24px;
             margin-bottom: 30px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
 
         .hero button {
-            padding: 12px 24px;
-            font-size: 18px;
-            background-color: #ff8c00;
+            padding: 15px 25px;
+            font-size: 20px;
+            background-color: #FF5733;
             color: white;
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: 0.3s background-color, 0.3s transform;
         }
 
         .hero button:hover {
-            background-color: #e67e00;
+            background-color: #D64F2A;
+            transform: scale(1.1);
         }
 
-        
-        .content-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Content Section */
+        .content {
             padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-
-        .content-section img {
-            max-width: 45%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .content-section img:hover {
-            transform: scale(1.05);
-        }
-
-        .content-section div {
-            max-width: 50%;
-            flex: 1;
-        }
-
-        .content-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #333;
-            text-align: right;
-        }
-
-        .content-section p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            text-align: right;
-        }
-
-        
-        .scroll-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .scroll-container a {
-            font-size: 18px;
-            color: #ff8c00;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 20px;
-            margin: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .scroll-container a:hover {
-            background-color: #e67e00;
-            color: white;
-        }
-
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        table th, table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        table th {
+            text-align: center;
             background-color: #333;
-            color: white;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #FF5733;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .content .card {
+            display: inline-block;
+            width: 250px;
+            background-color: #444;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .content .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .content .card img {
+            max-width: 159px;
+            max-block-size: 50%;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #111;
             text-align: center;
             padding: 20px;
+            color: white;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .hero button {
+                font-size: 18px;
+            }
+
+            .content h2 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .content .card {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
+
+ 
+
     
     <header class="hero">
         <h1>اعدادية ابو عبيدة الجراح</h1>
-        <p>المدرسة التي تخرج منها العديد من العلماء والمبدعين</p>
-        
+        <p>المدرسة التي تخرج منها العديد من العلماء والمبدعين.</p>
+       
     </header>
 
-    
-    <nav>
-        <a href="indexEN.html">English</a>
-        <a href="am.html">المقدمة</a>
-        <a href="ED.html">ابرز خريجين 2024</a>
-        <a href="MANG.html">المدراء السابقين</a>
-        <a href="tc.html">المدرسين</a>
-        <a href="CO.html">الخاتمة</a>
-        
-        
-       
-        
-       
-        
-    </nav>
+    <!-- Content Section -->
+    <div class="content">
+        <h2>مرحبًا بكم في مدرستنا</h2>
+        <p>نحن فخورون بتقديم إرث أبو عبيدة الجراح وإنجازات مدرستنا.</p>
 
-    
-    <div class="content-section">
-        <div>
-            <h2>المقدمة</h2>
-            <p>اعدادية أبو عبيدة الجراح للبنين تأسست سنة (1989م) وسميت بهذا الاسم نسبة إلى القائد الإسلامي العظيم. وقد افتتحت كمدرسة علمية صباحية وخرجت العديد من الطلبة المتفوقين علميًا وأخلاقيًا. أسهم خريجوها في خدمة المجتمع بمختلف المجالات. وقد سميت المدرسة باسم أحد كبار القادة العسكريين في صدر الإسلام الصحابي الجليل:</p>
-            <center>ابو عبيدة عامر بن عبدالله بن الجراح</center>
-            <p>أحد العشرة المبشّرين بالجنة، ومن السابقين الأولين إلى الإسلام. لقبه النبي محمد صلى الله عليه وآله وسلم بـ"أمين هذه الأمة". كان قائدًا عسكريًا بارزًا في بلاد الشام، وحافظًا لها، ومن أوائل الذين أسلموا على يد أبي بكر الصديق رضي الله عنه. شهد أبو عبيدة جميع المشاهد مع النبي صلى الله عليه وآله وسلم، ومن أشهر مواقفه قصة نزع السهام من وجه النبي يوم أحد.</p>
-            <p>تولى قيادة الجيوش الإسلامية في بلاد الشام، وحقق انتصارات كبيرة، وكان له تأثير كبير في معركة اليرموك التي قادها ضد الروم سنة 15هـ (636م). توفي أبو عبيدة الجراح بسبب الطاعون سنة 18هـ (639م) عن عمر ناهز 58 سنة في غور الأردن، ودُفن فيه.</p>
+        <div class="card" onclick="window.location.href='am.html'">
+            <img src="back.jpg" alt="Introduction">
+            <h3>المقدمة</h3>
+            <p>تعرف على تاريخ وإرث مدرستنا.</p>
         </div>
 
-        <img src="back.jpg" alt="School Image">
+        <div class="card" onclick="window.location.href='ED.html'">
+            <img src="back.jpg" alt="Graduates">
+            <h3>أبرز الخريجين</h3>
+            <p>تعرف على الخريجين المتميزين لعام 2024.</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='MANG.html'">
+            <img src="m.jpg" alt="Managers">
+            <h3>المدراء السابقين</h3>
+            <p>تعرف على تاريخ القيادة في مدرستنا.</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='tc.html'">
+            <img src="back.jpg" alt="Teachers">
+            <h3>المدرسين</h3>
+            <p>تعرف على المعلمين الذين شكلوا مستقبلنا.</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='CO.html'">
+            <img src="back.jpg" alt="Conclusion">
+            <h3>الخاتمة</h3>
+            <p>شكرًا لزيارتكم موقع اعدادية أبو عبيدة الجراح.</p>
+        </div>
+        <div class="card" onclick="window.location.href='indexEN.html'">
+            <img src="back.jpg" alt="s">
+            <h3>English</h3>
+            <p></p>
+        </div>
     </div>
 
-    <footer>
+    
+   <footer>
         <p>© 2026 Abdullah WK مصمم الموقع  </p>
     </footer>
 
