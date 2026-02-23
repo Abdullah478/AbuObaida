@@ -1,206 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abu Obaida Al-Jarrah Preparatory School</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #2E2E2E;
-            color: #fff;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        
-       
-        
-        .hero {
-            background: url('back.jpg') no-repeat center center/cover;
-            height: 600px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .hero h1 {
-            font-size: 70px;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero p {
-            font-size: 24px;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero button {
-            padding: 15px 25px;
-            font-size: 20px;
-            background-color: #FF5733;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s background-color, 0.3s transform;
-        }
-
-        .hero button:hover {
-            background-color: #e64a19;
-            transform: scale(1.1);
-        }
-
-        
-        .content {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #333;
-        }
-
-        .content h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #FF5733;
-        }
-
-        .content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #ddd;
-        }
-
-        .content .card {
-            display: inline-block;
-            width: 250px;
-            background-color: #444;
-            margin: 15px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .content .card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .content .card img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background-color: #111;
-            text-align: center;
-            padding: 20px;
-            color: white;
-        }
-
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 50px;
-            }
-
-            .hero p {
-                font-size: 20px;
-            }
-
-            .content h2 {
-                font-size: 28px;
-            }
-
-            .content p {
-                font-size: 16px;
-            }
-
-            .content .card {
-                width: 100%;
-            }
-        }
-    </style>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abu Obaida Al-Jarrah Preparatory School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--primary:#1a3a5c;--primary-dark:#0d2540;--accent:#c8860a;--gold:#d4a843;--surface:#f8f4ed;--card-bg:#fff;--text-dark:#1a1a2e;--text-muted:#6b7280;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--surface);color:var(--text-dark);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,37,64,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,168,67,.2);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);padding:.9rem 0;text-decoration:none;white-space:nowrap;}
+.nav-links{display:flex;flex-wrap:wrap;gap:.2rem;padding:.4rem 0;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.88rem;font-weight:500;padding:.45rem .85rem;border-radius:6px;transition:background .2s,color .2s;white-space:nowrap;}
+.nav-links a:hover{background:rgba(212,168,67,.15);color:var(--gold);}
+.hero{min-height:100vh;background:linear-gradient(to bottom,rgba(13,37,64,.88) 0%,rgba(13,37,64,.5) 50%,rgba(13,37,64,.92) 100%),url('back.jpg') center/cover no-repeat;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(212,168,67,.03) 40px,rgba(212,168,67,.03) 41px);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(212,168,67,.15);border:1px solid rgba(212,168,67,.4);color:var(--gold);padding:.4rem 1.2rem;border-radius:50px;font-size:.85rem;margin-bottom:1.5rem;opacity:0;animation:fadeDown .8s ease .2s forwards;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.5);line-height:1.2;opacity:0;animation:fadeUp .9s ease .5s forwards;margin-bottom:1rem;}
+.hero-divider{width:80px;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1rem auto;opacity:0;animation:fadeIn 1s ease .9s forwards;}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);color:rgba(255,255,255,.8);max-width:600px;font-weight:300;line-height:1.8;opacity:0;animation:fadeUp .9s ease 1s forwards;margin-bottom:2.5rem;}
+.hero-stats{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .9s ease 1.1s forwards;margin-bottom:2.5rem;}
+.hero-stat{text-align:center;border-right:1px solid rgba(212,168,67,.3);padding-right:3rem;}
+.hero-stat:last-child{border-right:none;}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--gold);display:block;line-height:1;}
+.stat-label{font-size:.82rem;color:rgba(255,255,255,.6);margin-top:.3rem;}
+.hero-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;padding:1rem 2.5rem;border-radius:4px;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:600;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;opacity:0;animation:fadeUp .9s ease 1.3s forwards;}
+.hero-btn:hover{background:#a06d05;transform:translateY(-3px);box-shadow:0 12px 30px rgba(200,134,10,.4);}
+.section{padding:6rem 2rem;}
+.section-center{text-align:center;}
+.section-tag{display:inline-block;background:rgba(200,134,10,.1);border:1px solid rgba(200,134,10,.3);color:var(--accent);padding:.3rem 1rem;border-radius:50px;font-size:.8rem;font-weight:600;margin-bottom:1rem;letter-spacing:.05em;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--primary);line-height:1.3;margin-bottom:.5rem;}
+.gold-line{width:60px;height:3px;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:2px;margin:1rem auto 2rem;}
+.section-desc{color:var(--text-muted);font-size:1rem;line-height:1.8;max-width:560px;margin:0 auto 3rem;}
+.cards-wrapper{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;padding:0 1rem;}
+.card{background:var(--card-bg);border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;cursor:pointer;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.14);}
+.card-img-wrap{position:relative;height:180px;overflow:hidden;background:linear-gradient(135deg,var(--primary),var(--primary-dark));}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.card:hover .card-img-wrap img{transform:scale(1.08);}
+.card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,37,64,.6),transparent);}
+.card-icon{position:absolute;bottom:1rem;right:1rem;width:42px;height:42px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 12px rgba(200,134,10,.4);}
+.card-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;opacity:.5;}
+.card-body{padding:1.4rem;flex:1;display:flex;flex-direction:column;}
+.card-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--primary);margin-bottom:.4rem;font-weight:700;}
+.card-desc{color:var(--text-muted);font-size:.88rem;line-height:1.7;flex:1;}
+.card-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;color:var(--accent);font-weight:600;font-size:.85rem;}
+.card-link::after{content:'→';}
+.quote-banner{background:linear-gradient(135deg,var(--accent),var(--gold));padding:5rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.quote-banner::before{content:'"';position:absolute;top:-2rem;left:50%;transform:translateX(-50%);font-size:15rem;color:rgba(255,255,255,.06);font-family:serif;line-height:1;}
+.quote-text{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2.2rem);color:#fff;line-height:1.6;max-width:700px;margin:0 auto 1rem;font-style:italic;position:relative;}
+.quote-source{color:rgba(255,255,255,.75);font-size:1rem;font-weight:600;}
+.values-section{background:var(--primary-dark);padding:6rem 2rem;text-align:center;}
+.values-section .section-title{color:#fff;}
+.values-section .section-desc{color:rgba(255,255,255,.55);}
+.values-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.value-item{padding:2.5rem 1.5rem;border:1px solid rgba(212,168,67,.15);border-radius:12px;background:rgba(255,255,255,.03);transition:background .3s,border-color .3s;}
+.value-item:hover{background:rgba(212,168,67,.07);border-color:rgba(212,168,67,.4);}
+.value-icon{font-size:2.5rem;margin-bottom:1rem;}
+.value-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);margin-bottom:.8rem;}
+.value-desc{color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.7;}
+footer{background:#080f1a;padding:3rem 4rem 2rem;}
+.footer-top{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.footer-brand h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);margin-bottom:.8rem;}
+.footer-brand p{color:rgba(255,255,255,.4);font-size:.88rem;line-height:1.8;font-weight:300;}
+.footer-links-col h4{color:var(--gold);font-size:.82rem;letter-spacing:.1em;margin-bottom:1.2rem;text-transform:uppercase;}
+.footer-links-col ul{list-style:none;}
+.footer-links-col ul li{margin-bottom:.6rem;}
+.footer-links-col ul li a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.88rem;transition:color .2s;display:flex;align-items:center;gap:.4rem;}
+.footer-links-col ul li a:hover{color:var(--gold);}
+.footer-links-col ul li a::before{content:'→';font-size:.7rem;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-copy{color:rgba(255,255,255,.3);font-size:.8rem;}
+.footer-copy span{color:var(--gold);}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:900px){.values-grid{grid-template-columns:1fr;}.hero-stats{gap:1.5rem;}.hero-stat{border-right:none;padding-right:0;}.footer-top{grid-template-columns:1fr;}}
+@media(max-width:600px){nav{padding:.5rem 1rem;}.nav-links a{font-size:.78rem;}footer{padding:2rem 1.5rem;}}
+</style>
 </head>
 <body>
-
-    
-    
-
-    
-    <header class="hero">
-        <h1>Abu Obaida Al-Jarrah Preparatory School</h1>
-        <p>The school that produced many scientists and innovators</p>
-        
-    </header>
-
-    <!-- Content Section -->
-    <div class="content">
-        <h2>Welcome to Our School</h2>
-        <p>We are proud to present the legacy of Abu Obaida Al-Jarrah and the achievements of our school.</p>
-
-        <div class="card" onclick="window.location.href='amEN.html'">
-            <img src="back.jpg" alt="Introduction">
-            <h3>Introduction</h3>
-            <p>Learn more about the history and legacy of our school.</p>
-        </div>
-
-        <div class="card" onclick="window.location.href='EDEN.html'">
-            <img src="ed2.jpg" alt="Graduates">
-            <h3>Notable Graduates</h3>
-            <p>Meet the outstanding graduates of 2024.</p>
-        </div>
-
-        <div class="card" onclick="window.location.href='MANGEN.html'">
-            <img src="mng.png" alt="Managers">
-            <h3>Former Managers</h3>
-            <p>Explore the history of leadership in our school.</p>
-        </div>
-
-        <div class="card" onclick="window.location.href='tcEN.html'">
-            <img src="tc1.jpg" alt="Teachers">
-            <h3>Teachers</h3>
-            <p>Meet the educators who shaped our future.</p>
-        </div>
-
-        <div class="card" onclick="window.location.href='COEN.html'">
-            <img src="co.jpg" alt="Conclusion">
-            <h3>Conclusion</h3>
-            <p>Thank you for exploring Abu Obaida Al-Jarrah Preparatory School.</p>
-        </div>
-        <div class="card" onclick="window.location.href='index.html'">
-            <img src="A.jpg" alt="Conclusion">
-            <h3>عربي</h3>
-            <p></p>
-        </div>
-    </div>
-
-    
-    <footer>
-        <p> مصممين الموقع  </p>
-        <p>© 2026 Abdullah WK -- Malak Mohammed</p>
-    </footer>
+<nav>
+  <a href="indexEN.html" class="nav-brand">🏫 Abu Obaida Al-Jarrah School</a>
+  <div class="nav-links">
+    <a href="amEN.html">Introduction</a>
+    <a href="EDEN.html">Graduates</a>
+    <a href="MANGEN.html">Managers</a>
+    <a href="tcEN.html">Teachers</a>
+    <a href="COEN.html">Conclusion</a>
+    <a href="index.html">عربي</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-badge">🎓 &nbsp; Distinguished Since 1988</div>
+  <h1>Abu Obaida Al-Jarrah<br>Preparatory School</h1>
+  <div class="hero-divider"></div>
+  <p>The school that produced many scientists and innovators — an educational landmark building generations and shaping the future.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="stat-num">1988</span><span class="stat-label">Year Founded</span></div>
+    <div class="hero-stat"><span class="stat-num">1000+</span><span class="stat-label">Outstanding Graduates</span></div>
+    <div class="hero-stat"><span class="stat-num">30+</span><span class="stat-label">Teaching Staff</span></div>
+  </div>
+  <a href="#cards" class="hero-btn">Explore the School &nbsp;↓</a>
+</section>
+<section class="section section-center" id="cards">
+  <div class="reveal">
+    <span class="section-tag">SECTIONS</span>
+    <h2 class="section-title">Explore Our School</h2>
+    <div class="gold-line"></div>
+    <p class="section-desc">Learn about the school's history, outstanding graduates, and distinguished teaching staff.</p>
+  </div>
+  <div class="cards-wrapper">
+    <a href="amEN.html" class="card reveal"><div class="card-img-wrap"><img src="back.jpg" alt="Introduction" onerror="this.style.display='none'"/><div class="card-img-overlay"></div><div class="card-icon">📖</div><div class="card-placeholder">🏫</div></div><div class="card-body"><div class="card-title">Introduction</div><p class="card-desc">Learn about the history and legacy of our distinguished school since its founding.</p><span class="card-link">Read More</span></div></a>
+    <a href="EDEN.html" class="card reveal" style="transition-delay:.1s"><div class="card-img-wrap"><img src="ed2.jpg" alt="Graduates" onerror="this.style.display='none'"/><div class="card-img-overlay"></div><div class="card-icon">🎓</div><div class="card-placeholder">🎓</div></div><div class="card-body"><div class="card-title">Notable Graduates</div><p class="card-desc">Meet the outstanding graduates of 2024 who have brought honor to our school.</p><span class="card-link">Read More</span></div></a>
+    <a href="MANGEN.html" class="card reveal" style="transition-delay:.2s"><div class="card-img-wrap"><img src="mng.png" alt="Managers" onerror="this.style.display='none'"/><div class="card-img-overlay"></div><div class="card-icon">👔</div><div class="card-placeholder">🏛️</div></div><div class="card-body"><div class="card-title">Former Managers</div><p class="card-desc">Explore the history of leadership and the principals who guided our school.</p><span class="card-link">Read More</span></div></a>
+    <a href="tcEN.html" class="card reveal" style="transition-delay:.3s"><div class="card-img-wrap"><img src="tc1.jpg" alt="Teachers" onerror="this.style.display='none'"/><div class="card-img-overlay"></div><div class="card-icon">👨‍🏫</div><div class="card-placeholder">📚</div></div><div class="card-body"><div class="card-title">Teachers</div><p class="card-desc">Meet the dedicated educators who illuminated minds and shaped students' futures.</p><span class="card-link">Read More</span></div></a>
+    <a href="COEN.html" class="card reveal" style="transition-delay:.4s"><div class="card-img-wrap"><img src="co.jpg" alt="Conclusion" onerror="this.style.display='none'"/><div class="card-img-overlay"></div><div class="card-icon">🌟</div><div class="card-placeholder">✨</div></div><div class="card-body"><div class="card-title">Conclusion</div><p class="card-desc">Thank you for visiting — we are proud to serve our community with excellence.</p><span class="card-link">Read More</span></div></a>
+    <a href="index.html" class="card reveal" style="transition-delay:.5s"><div class="card-img-wrap" style="background:linear-gradient(135deg,#1a3a5c,#0d2540)"><div class="card-img-overlay"></div><div class="card-icon">🌐</div><div class="card-placeholder">🌐</div></div><div class="card-body"><div class="card-title">النسخة العربية</div><p class="card-desc">زوروا النسخة العربية من موقعنا للتعرف أكثر على مدرستنا.</p><span class="card-link">عربي</span></div></a>
+  </div>
+</section>
+<div class="quote-banner">
+  <p class="quote-text">"Seeking knowledge is an obligation upon every Muslim"</p>
+  <p class="quote-source">— Hadith of the Prophet ﷺ</p>
+</div>
+<section class="values-section">
+  <div class="reveal">
+    <span class="section-tag" style="background:rgba(212,168,67,.15);border-color:rgba(212,168,67,.4);color:var(--gold)">OUR VALUES</span>
+    <h2 class="section-title">What Sets Us Apart</h2>
+    <div class="gold-line"></div>
+    <p class="section-desc" style="color:rgba(255,255,255,.55)">We strive for excellence in education and the holistic development of each student.</p>
+  </div>
+  <div class="values-grid">
+    <div class="value-item reveal"><div class="value-icon">🎯</div><div class="value-title">Academic Excellence</div><p class="value-desc">We set high academic standards at the core of our educational mission to produce outstanding generations.</p></div>
+    <div class="value-item reveal" style="transition-delay:.15s"><div class="value-icon">🤝</div><div class="value-title">Belonging & Values</div><p class="value-desc">We instill in students a sense of belonging to the homeland and community, and a spirit of responsibility.</p></div>
+    <div class="value-item reveal" style="transition-delay:.3s"><div class="value-icon">💡</div><div class="value-title">Creativity & Innovation</div><p class="value-desc">We encourage creative thinking to prepare a generation capable of meeting the challenges of the future.</p></div>
+  </div>
+</section>
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><h3>🏫 Abu Obaida Al-Jarrah Preparatory School</h3><p>A distinguished educational institution building generations in Baiji, Salahuddin, Iraq.</p></div>
+    <div class="footer-links-col"><h4>Quick Links</h4><ul>
+      <li><a href="amEN.html">Introduction</a></li><li><a href="EDEN.html">Notable Graduates</a></li><li><a href="MANGEN.html">Former Managers</a></li><li><a href="tcEN.html">Teachers</a></li><li><a href="COEN.html">Conclusion</a></li><li><a href="index.html">عربي</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Abu Obaida Al-Jarrah Preparatory School. All rights reserved.</p><p class="footer-copy">Designed by: <span>Abdullah WK</span> </p></div>
+</footer>
+<script>
+const r=document.querySelectorAll('.reveal');const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target);}});},{threshold:.1});r.forEach(el=>o.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+</script>
 </body>
 </html>
